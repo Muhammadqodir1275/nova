@@ -1,0 +1,72 @@
+.hg-container {
+    position: relative;
+    display: inline-block;
+    transition: transform 1s linear;
+  }
+  
+  .hg-container.rotated {
+    transform: rotate(180deg);
+  }
+  
+  /* Stakan konturi */
+  .hg-frame {
+    position: absolute;
+    inset: 0;
+    border: 3px solid #fff; /* oq rang kontrast uchun */
+    border-radius: 6px;
+    clip-path: polygon(0 0, 100% 0, 60% 50%, 40% 50%, 0 0);
+  }
+  
+  /* Yuqori qum */
+  .hg-sand-top {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to bottom, #ffffff, #f7d27a); /* oqdan sariqqa */
+    clip-path: polygon(14% 12%, 86% 12%, 56% 49%, 44% 49%);
+    transform-origin: 50% 12%;
+    animation: sandTop 3s linear infinite;
+  }
+  
+  /* Pastki qum */
+  .hg-sand-bottom {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, #ffffff, #f7d27a);
+    clip-path: polygon(56% 51%, 44% 51%, 14% 88%, 86% 88%);
+    transform-origin: 50% 88%;
+    animation: sandBottom 3s linear infinite;
+  }
+  
+  /* Oqim */
+  .hg-stream {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 6%;
+    top: 48%;
+    bottom: 12%;
+    background: linear-gradient(to bottom, #ffffff, #f7d27a);
+    border-radius: 2px;
+    animation: stream 3s linear infinite;
+  }
+  
+  /* Animatsiyalar */
+  @keyframes sandTop {
+    0% { transform: scaleY(1); opacity: 1; }
+    80% { transform: scaleY(0.05); opacity: 0.8; }
+    100% { transform: scaleY(0.05); opacity: 0.8; }
+  }
+  
+  @keyframes sandBottom {
+    0% { transform: scaleY(0.05); opacity: 0.8; }
+    80% { transform: scaleY(0.95); opacity: 1; }
+    100% { transform: scaleY(0.95); opacity: 1; }
+  }
+  
+  @keyframes stream {
+    0% { opacity: 1; top: 49%; bottom: 12%; }
+    80% { opacity: 1; top: 49%; bottom: 12%; }
+    90% { opacity: 0.4; top: 49%; bottom: 20%; }
+    100% { opacity: 0; top: 49%; bottom: 30%; }
+  }
+  

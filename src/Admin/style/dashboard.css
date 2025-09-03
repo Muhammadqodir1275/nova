@@ -1,0 +1,68 @@
+.dashboard-container {
+  padding: 20px;
+  font-family: Arial, sans-serif;
+  background-color: #121212; /* qorong'i fon */
+  color: #ffffff; /* matn oq rang */
+  /* min-height: 100vh; */
+}
+
+.dashboard-title {
+  text-align: center;
+  margin-bottom: 15px;
+  font-size: 24px;
+  color: #ffffff;
+}
+
+.dashboard-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.dashboard-table th,
+.dashboard-table td {
+  border: 1px solid #444; /* qorong'i chegara */
+  padding: 8px;
+  text-align: center;
+}
+
+.active-user {
+  background-color: #1e1e1e; /* yengil qorong'i fon */
+}
+
+.active-sub {
+  color: #4caf50; /* yashil rang */
+  font-weight: bold;
+}
+
+.inactive-sub {
+  color: #bbbbbb; /* kulrang rang */
+}
+
+.no-users {
+  text-align: center;
+  font-style: italic;
+  color: #888;
+}
+
+.subscribe-btn,
+.unsubscribe-btn,
+.delete-btn {
+  margin: 2px;
+  padding: 5px 8px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  color: white;
+}
+
+.subscribe-btn.one-month { background-color: #2196F3; }
+.subscribe-btn.three-month { background-color: #1976D2; }
+.subscribe-btn.six-month { background-color: #1565C0; }
+.subscribe-btn.one-year { background-color: #0D47A1; }
+
+.unsubscribe-btn { background-color: #FF9800; }
+.delete-btn { background-color: #F44336; }
+
+button:hover {
+  opacity: 0.85;
+}

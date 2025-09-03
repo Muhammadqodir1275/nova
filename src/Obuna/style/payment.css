@@ -1,0 +1,164 @@
+.payment-container {
+    background-color: #0f0f0f;
+    min-height: 100vh;
+    padding: 50px 0;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    font-family: 'Segoe UI', sans-serif;
+  }
+  
+  /* Card */
+  .payment-page {
+    max-width: 480px;
+    width: 90%;
+    padding: 30px;
+    border-radius: 16px;
+    text-align: center;
+    background: #1a1a1a;
+    color: #eaeaea;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.6),
+                0 0 15px rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255,255,255,0.05);
+    animation: fadeIn 0.6s ease-in-out;
+  }
+  
+  /* Title */
+  .payment-page h2 {
+    font-size: 22px;
+    margin-bottom: 20px;
+    color: #ffffff;
+    transition: color 0.3s ease;
+  }
+  
+  /* Plan info */
+  .plan-info {
+    margin-bottom: 20px;
+    font-size: 18px;
+    font-weight: 500;
+    color: #fff;
+  }
+  
+  /* Card info */
+  .card-karta {
+    text-align: left;
+    margin-bottom: 20px;
+    background: #2a2a2a;
+    padding: 15px;
+    border-radius: 12px;
+    border: 1px solid rgba(255,255,255,0.05);
+  }
+  
+  .card-karta p {
+    font-size: 15px;
+    line-height: 1.5;
+    margin-bottom: 8px;
+    color: #eaeaea;
+  }
+  
+  .card-karta .note {
+    color: #bbbbbb;
+    font-style: italic;
+    font-size: 14px;
+  }
+  
+  /* Image upload */
+  .image-upload-wrapper {
+    margin-bottom: 20px;
+  }
+  
+  .image-upload-div {
+    width: 100%;
+    height: 200px;
+    border: 2px dashed #fff;
+    border-radius: 12px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-size: 16px;
+    transition: all 0.3s ease;
+    overflow: hidden;
+    background-color: #242424;
+  }
+  
+  .uploaded-image {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    border-radius: 12px;
+    display: block;
+    margin: auto;
+  }
+  
+  /* Button */
+  .pay-button {
+    position: relative;
+    padding: 12px 25px;
+    background: #fff;      /* oq */
+    color: #0f0f0f;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.3s ease;
+    width: 100%;
+  }
+  
+  .pay-button:hover {
+    background: #ff6666;   /* och qizil */
+    color: #fff;
+    box-shadow: 0 0 15px rgba(255, 102, 102, 0.6);
+  }
+  
+  .pay-button:active {
+    background: #cc0000;   /* to‘q qizil */
+    color: #fff;
+  }
+  
+  .pay-button:disabled {
+    background: #555;
+    color: #ccc;
+    cursor: not-allowed;
+  }
+  
+  /* Spinner */
+  .spinner {
+    width: 20px;
+    height: 20px;
+    border: 3px solid white;
+    border-top: 3px solid transparent;
+    border-radius: 50%;
+    display: inline-block;
+    animation: spin 1s linear infinite;
+  }
+  
+  @keyframes spin {
+    100% { transform: rotate(360deg); }
+  }
+  
+  /* Loader */
+  .loader-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 300px;
+  }
+  
+  .loader-wrapper p {
+    color: #eaeaea;
+    font-weight: 500;
+    margin-top: 15px;
+    font-size: 18px;
+    text-align: center;
+  }
+  
+  /* Fade in */
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(15px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  

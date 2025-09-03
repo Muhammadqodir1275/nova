@@ -1,0 +1,217 @@
+.cardpage-container {
+  padding: 30px;
+  color: #fff;
+  background-color: #1a1a1a;
+  min-height: 100vh;
+  font-family: 'Arial', sans-serif;
+  transition: all 0.3s ease;
+}
+
+.cardpage-container a {
+  color: #ff4d4f;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.cardpage-container h1 {
+  margin-top: 20px;
+  font-size: clamp(24px, 4vw, 32px); 
+}
+
+.cardpage-container p {
+  margin: 10px 0;
+  line-height: 1.6;
+  font-size: clamp(14px, 2vw, 18px);
+}
+
+.video-box,
+.video-alert {
+  width: 90%;
+  max-width: 1200px;
+  min-height: 30vh;
+  height: auto;
+  border-radius: 12px;
+  margin: 30px auto;
+  text-align: center;
+  font-weight: bold;
+  color: #ff4d4f;
+  transition: all 0.5s ease;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+.video-alert {
+  border: 2px solid #444;
+  background: #1e1e1e;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.6);
+}
+
+.video-alert p {
+  padding: 20px;
+  font-size: clamp(16px, 2vw, 20px);
+  color: #ff6b81;
+}
+
+.video-player video {
+  width: 90vw;             
+  max-width: 1200px;
+  height: 50vw;           
+  max-height: 680px;
+  border-radius: 12px;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.5);
+  background-color: #000;
+  object-fit: cover;
+  transition: all 0.5s ease;
+}
+
+.video-buttons {
+  margin-top: 15px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+}
+
+.video-buttons button {
+  padding: clamp(6px, 1vw, 12px) clamp(12px, 2vw, 20px);
+  border: none;
+  border-radius: 8px;
+  background-color: #333;
+  color: #fff;
+  cursor: pointer;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+.video-buttons button:hover,
+.video-buttons button.active {
+  background-color: #ff4d4f;
+  transform: scale(1.05);
+}
+
+.load-video {
+  margin-top: 15px;
+  padding: clamp(8px, 1.5vw, 12px) clamp(20px, 4vw, 40px);
+  background: #2ed573;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background 0.3s, transform 0.3s ease;
+}
+
+.load-video:hover {
+  background: #27ae60;
+  transform: scale(1.03);
+}
+
+.comments-section {
+  margin-top: 30px;
+  padding: 15px;
+  background: #151515;
+  border-radius: 12px;
+  transition: all 0.3s ease;
+}
+
+.comments-section h4 {
+  color: #ffcc00;
+  margin-bottom: 10px;
+  font-size: clamp(16px, 2.5vw, 20px);
+}
+
+.comments-section ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  max-height: 200px;
+  overflow-y: auto;
+}
+
+.comments-section ul li {
+  padding: 5px 0;
+  border-bottom: 1px solid rgba(255,255,255,0.05);
+  color: #ccc;
+  font-size: clamp(12px, 1.8vw, 14px);
+}
+
+.comment-form {
+  display: flex;
+  gap: 5px;
+  margin-top: 10px;
+}
+
+.comment-form input {
+  flex: 1;
+  padding: clamp(5px, 1vw, 8px) clamp(8px, 2vw, 10px);
+  border: 1px solid #333;
+  border-radius: 6px;
+  background: #0d0d0d;
+  color: #fff;
+}
+
+.comment-form input::placeholder {
+  color: #777;
+  font-size: clamp(12px, 1.8vw, 14px);
+}
+
+.comment-form button {
+  padding: clamp(5px, 1vw, 8px) clamp(10px, 2vw, 12px);
+  background: #ff6b81;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  color: white;
+  font-weight: bold;
+  transition: background 0.3s;
+}
+
+.comment-form button:hover {
+  background: #ff4757;
+}
+
+@media (max-width: 1200px) {
+  .video-player video {
+    width: 95vw;
+    height: 50vw;
+  }
+}
+
+@media (max-width: 900px) {
+  .cardpage-container {
+    padding: 25px;
+  }
+  
+  .video-player video {
+    height: 45vw;
+  }
+  
+  .video-buttons {
+    gap: 8px;
+  }
+}
+
+@media (max-width: 600px) {
+  .cardpage-container {
+    padding: 20px;
+  }
+
+  .cardpage-container h1 {
+    font-size: clamp(20px, 5vw, 24px);
+  }
+
+  .video-player video {
+    height: 40vw;
+  }
+
+  .video-buttons {
+    gap: 5px;
+  }
+
+  .video-buttons button {
+    padding: clamp(4px, 2vw, 8px) clamp(6px, 2vw, 12px);
+    font-size: clamp(10px, 3vw, 14px);
+  }
+}

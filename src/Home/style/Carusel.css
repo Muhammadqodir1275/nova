@@ -1,0 +1,161 @@
+/* Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Poppins:wght@400;500;700&display=swap');
+
+.carousel-container {
+  position: relative;
+  width: 100%;
+  margin: auto;
+  overflow: hidden;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.5);
+  background: #0d0d0d;
+  font-family: 'Poppins', sans-serif;
+}
+
+.carousel-slide {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.slide {
+  position: relative;
+  min-width: 100%;
+}
+
+.slide img {
+  width: 100%;
+  height: 500px;
+  object-fit: cover;
+  filter: brightness(30%) blur(0.5px);
+}
+
+.yozuvlar {
+  position: absolute;
+  top: 60px;    
+  left: 20px;
+  max-width: 60%;
+  z-index: 10;
+  transition: all 0.3s ease;
+}
+
+.title {
+  text-decoration: none;
+  font-family: 'Playfair Display', serif;
+  font-size: 42px;        
+  font-weight: 600;
+  color: #FFFFFF;
+  padding: 12px 20px;
+  border-radius: 5px;
+  margin: 0 0 10px 0;
+  transition: color 0.3s ease, transform 0.3s ease;
+  cursor: pointer;
+  line-height: 1.2;
+}
+
+.title:hover {
+  color: #ffcc00;          
+  transform: translateX(5px);
+}
+
+.desc {
+  font-family: 'Poppins', sans-serif;
+  font-size: 20px;        
+  color: rgba(255, 255, 255, 0.85); 
+  padding: 10px 15px;
+  border-radius: 5px;
+  line-height: 1.6;
+  transition: color 0.3s ease;
+}
+
+.prev, .next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0,0,0,0.6);
+  color: white;
+  border: none;
+  padding: 15px;
+  cursor: pointer;
+  font-size: 24px;
+  border-radius: 50%;
+  user-select: none;
+  transition: 0.3s;
+}
+
+.prev:hover, .next:hover {
+  background: rgba(255,255,255,0.6);
+  color: black;
+}
+
+.prev { left: 10px; }
+.next { right: 10px; }
+
+.dots {
+  position: absolute;
+  bottom: 10px;
+  width: 100%;
+  text-align: center;
+}
+
+.dot {
+  height: 12px;
+  width: 12px;
+  margin: 0 4px;
+  background-color: rgba(255,255,255,0.6);
+  border-radius: 50%;
+  display: inline-block;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.3s;
+}
+
+.dot:hover {
+  background-color: rgba(255,255,255,0.9);
+  transform: scale(1.2);
+}
+
+.dot.active {
+  background-color: #ffcc00;
+}
+
+.korish-btn {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 10px 20px;
+  background: linear-gradient(135deg, #ff0055, #ff6600);
+  color: #fff;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 16px;
+  font-family: 'Poppins', sans-serif;
+  letter-spacing: 0.5px;
+  transition: 0.3s;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+}
+
+.korish-btn:hover {
+  background: linear-gradient(135deg, #e6004c, #e65c00);
+  transform: scale(1.08) translateY(-2px);
+  box-shadow: 0 6px 15px rgba(0,0,0,0.4);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .slide img {
+    height: 300px;
+  }
+
+  .title {
+    font-size: 28px;
+    padding: 10px 15px;
+  }
+
+  .desc {
+    font-size: 16px;
+    padding: 8px 12px;
+  }
+
+  .korish-btn {
+    font-size: 14px;
+    padding: 8px 16px;
+  }
+}

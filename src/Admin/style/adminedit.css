@@ -1,0 +1,257 @@
+.admin-edit-container {
+    padding: 20px;
+    font-family: 'Arial', sans-serif;
+    background-color: #121212;
+    color: #ffffff;
+    min-height: 100vh;
+}
+.anime-search {
+    position: relative;
+    max-width: 400px;
+    margin-bottom: 20px;
+}
+.anime-search input {
+    width: 100%; 
+    max-width: 600px; 
+    padding: 12px 40px 12px 14px; 
+    border-radius: 10px;
+    border: 1px solid #444;
+    background-color: #1e1e1e;
+    color: #fff;
+    font-size: 16px; 
+}
+.anime-search i {
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #aaa;
+    font-size: 16px;
+}
+
+.anime-list {
+    max-height: 400px;
+    overflow-y: auto;
+    border: 1px solid #333;
+    border-radius: 8px;
+    background-color: #1e1e1e;
+    padding: 8px 0;
+    margin-bottom: 20px;
+}
+.anime-item {
+    padding: 10px 15px;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #2a2a2a;
+    transition: background 0.3s;
+}
+.anime-item:hover {
+    background-color: #2a2a2a;
+}
+.anime-item.selected {
+    background-color: #2b4f6d;
+    font-weight: bold;
+}
+.badge {
+    padding: 5px 12px;
+    border-radius: 14px;
+    font-size: 13px;
+    text-transform: uppercase;
+}
+.badge.free {
+    background-color: #4caf50;
+    color: #fff;
+}
+.badge.premium {
+    background-color: #f44336; 
+    color: #fff;
+}
+.admin-modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0,0,0,0.8);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 2000;
+}
+.admin-modal {
+    background-color: #1f1f1f;
+    color: #fff;
+    padding: 30px;
+    border-radius: 14px;
+    width: 600px;
+    max-width: 95%;
+    max-height: 90%;
+    overflow-y: auto;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.7);
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.admin-modal-form {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.admin-flex-row {
+    display: flex;
+    gap: 15px;
+}
+.admin-flex-item {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.admin-form-group label {
+    font-weight: bold;
+    margin-bottom: 6px;
+    display: block;
+    color: #fff;
+}
+.admin-form-input,
+.admin-form-textarea,
+.admin-form-select,
+.admin-form-file {
+    width: 100%;
+    padding: 10px 12px;
+    border-radius: 8px;
+    border: 1px solid #444;
+    background-color: #2a2a2a;
+    color: #fff;
+    font-size: 14px;
+}
+.admin-form-textarea {
+    resize: vertical;
+}
+
+.admin-anime-img-preview {
+    margin-top: 10px;
+    max-width: 200px;
+    border-radius: 8px;
+    border: 1px solid #444;
+}
+
+.admin-video-column {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-bottom: 15px;
+}
+.admin-video-part-name {
+    font-style: italic;
+    color: #bbb;
+    margin-bottom: 4px;
+}
+.admin-video-remove-btn {
+    background-color: #f44336;
+    color: #fff;
+    border: none;
+    padding: 6px 12px;
+    border-radius: 6px;
+    cursor: pointer;
+    width: fit-content;
+    margin-top: 4px;
+}
+.admin-video-add-btn {
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    padding: 10px 16px;
+    border-radius: 6px;
+    cursor: pointer;
+    width: 100%;
+}
+
+.admin-modal-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 12px;
+    margin-top: 12px;
+}
+.admin-save-btn {
+    background-color: #2196f3;
+    color: white;
+    border: none;
+    padding: 8px 18px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+.admin-delete-btn {
+    background-color: #f44336;
+    color: white;
+    border: none;
+    padding: 8px 18px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+.admin-close-btn {
+    background-color: #777;
+    color: white;
+    border: none;
+    padding: 8px 18px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.admin-save-btn:hover,
+.admin-delete-btn:hover,
+.admin-close-btn:hover,
+.admin-video-remove-btn:hover,
+.admin-video-add-btn:hover {
+    opacity: 0.85;
+}
+
+.admin-modal::-webkit-scrollbar {
+    width: 8px;
+}
+.admin-modal::-webkit-scrollbar-track {
+    background: #1f1f1f;
+}
+.admin-modal::-webkit-scrollbar-thumb {
+    background-color: #555;
+    border-radius: 4px;
+}
+
+
+
+
+.anime-item.add-new {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+  
+  .Anime-qoshish {
+    width: 100%;
+    padding: 14px 20px;
+    border: none;
+    border-radius: 12px;
+    background: linear-gradient(135deg, #4a90e2, #357abd);
+    color: #fff;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-align: center;
+  }
+  
+  .Anime-qoshish i {
+    margin-right: 8px;
+  }
+  
+  .Anime-qoshish:hover {
+    background: linear-gradient(135deg, #5aa0f0, #3c6db5);
+    transform: translateY(-3px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+  }
+  
